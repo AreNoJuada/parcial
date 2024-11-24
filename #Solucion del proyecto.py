@@ -5,10 +5,10 @@
 from tkinter import Tk, Label, Entry, Button, StringVar, Menu
 from tkinter.ttk import Treeview, OptionMenu, Menubutton
 
-#Creamos la ventana principal
+#Ventana principal 
 root = Tk()
 root.title("Simulador de ventas")
-root.geometry("400x400")
+root.geometry("600x600")
 
 #Lista de productos que gestiona el inventario
 inventario = []
