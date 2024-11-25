@@ -16,12 +16,12 @@ root.configure(background='#D8D8D8')
 ### frame dentro de la ventana ###
 frame1=tk.Frame(root, bg='#484848')
 frame1.pack(expand=True, fill='both', side='left')
-frame1.config(cursor='heart', border='26')
+frame1.config(border='26')
 frame1.config(width='50', height='50')
 
 frame2=tk.Frame(root, bg='lightblue')
 frame2.pack(expand=True, fill='both', side='right')
-frame2.config(cursor='star',border='25', relief='sunken')
+frame2.config(border='25', relief='sunken')
 
 frame3=tk.Frame(root,bg='#42A5F5')
 frame3.place(x=550, y=165)
