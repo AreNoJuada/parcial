@@ -24,7 +24,7 @@ frame2.pack(expand=True, fill='both', side='right')
 frame2.config(border='25', relief='sunken')
 
 frame3=tk.Frame(root,bg='#42A5F5')
-frame3.place(x=550, y=165)
+frame3.place(x=550, y=300)
 frame3.config(width=200, height=100)
 
 
@@ -46,7 +46,7 @@ def ventana_secundaria():
     # Crear una ventana Toplevel (hija de root)
     ventana_historial = Toplevel(root)
     ventana_historial.title("Historial de Ventas")
-    ventana_historial.geometry("600x500")
+    ventana_historial.geometry("800x500")
     ventana_historial.configure(background='#F5F5F5')
 
     # Título
@@ -219,29 +219,30 @@ def ventas_productos():
 tituloLabel=Label(frame1, text='Ventas', fg='darkgreen', font=('Arial', 28))
 tituloLabel.place(relx=.15, rely=.01, relheight=.15, relwidth=.70)
 
-NombreLabel=Label(frame2, text="Nombre del Producto:")
+NombreLabel=Label(frame2, text="Nombre del Producto:", font=('Arial', 12))
 NombreLabel.grid(row=0, column=0, padx=10, pady=10)
 NombreEntrada=Entry(frame2, textvariable=nombre_producto)
 NombreEntrada.grid(row=0, column=1, padx=10, pady=10)
 
-PrecioLabel=Label(frame2, text="Precio del Producto:")
+PrecioLabel=Label(frame2, text="Precio del Producto:", font=('Arial', 12))
 PrecioLabel.grid(row=1, column=0, padx=10, pady=10)
 PrecioEntrada=Entry(frame2, textvariable=precio_producto)
 PrecioEntrada.grid(row=1, column=1, padx=10, pady=10)
 
-CantidadLabel=Label(frame2, text="Cantidad del Producto:")
-CantidadLabel.grid(row=2, column=0, padx=10, pady=10)
+CantidadLabel=Label(frame2, text="Cantidad del Producto:", font=('Arial', 12))
+CantidadLabel.grid(row=3, column=0, padx=10, pady=10)
 CantidadEntrada=Entry(frame2, textvariable=cantidad_producto)
-CantidadEntrada.grid(row=2, column=1,padx=10, pady=10)
+CantidadEntrada.grid(row=3, column=1,padx=10, pady=10)
 
 # Widget para seleccionar un producto
-SeleccioanarLabel=Label(frame2, text="Seleccionar Producto:")
-SeleccioanarLabel.grid(row=0, column=5, columnspan=3)
-opcion_menu = OptionMenu(frame2, producto_seleccionado, "")
-opcion_menu.grid(row=1, column=5, columnspan=3)
+SeleccioanarLabel=Label(frame2, text="Seleccionar Producto:", font=('Arial', 12))
+SeleccioanarLabel.grid(row=1, column=7, columnspan=3)
+opcion_menu = tk.OptionMenu(frame2, producto_seleccionado, "")
+opcion_menu.config(bg='grey', width=12)
+opcion_menu.place(x=350, y=100)
 
 #boton para modificar el producto
-modificarBoton=Button(frame1, text="Modificar producto", command=modificar_producto)
+modificarBoton=Button(frame1, text="Modificar", command=modificar_producto)
 modificarBoton.place(relx=.25, rely=.25, relwidth=.5, relheight=.15)
 
 agregarProductoBoton=Button(frame1, text="Agregar Producto", command=agregar_producto)
