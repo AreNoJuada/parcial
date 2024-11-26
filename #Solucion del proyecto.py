@@ -25,7 +25,7 @@ frame2.config(border='25', relief='sunken')
 
 frame3=tk.Frame(root,bg='#42A5F5')
 frame3.place(x=550, y=300)
-frame3.config(width=200, height=100)
+frame3.config(width=350, height=350)
 
 
 #Lista de productos que gestiona el inventario
